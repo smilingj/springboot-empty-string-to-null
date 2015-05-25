@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org"
+	xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<head>
+	<title>string2null example</title>
+</head>
+<body>
+	<form action="#" th:action="@{/}" th:object="${model}" method="post">
+		<label th:for="${#ids.next('text')}">Text</label>
+		<input type="text" th:field="*{text}" />
+		<button type="submit">Submit</button>
+	</form>
+</body>
+</html>
